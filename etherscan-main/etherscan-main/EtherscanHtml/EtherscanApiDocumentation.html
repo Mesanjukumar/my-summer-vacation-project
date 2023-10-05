@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etherscann Api Documentation</title>
+    <link rel="stylesheet" href="../EtherscanCss/EtherscanApiDocumentation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js">
+<link rel="icon" href="../EtherscanImg/favicon.png" type="icon/png">
+</head>
+<body>
+<header class="header">
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+<div class="container-fluid">
+<a href="#" class="navbar-brand"><img src="../EtherscanImg/logo-etherscan.svg" alt="" style="width: 174px;"></a>
+<button type="button" class="btn btn-light dropdown me-auto" data-bs-toggle="dropdown" id="etherbtlg">
+Etherscan <i class="fa fa-angle-down"></i>   
+</button>
+<ul class="dropdown-menu" style="margin-left: 180px;">
+<li><a href="#" class="dropdown-item"><b>Etherscan</b></a></li>    
+<a href="#" class="dropdown-item">Goerli Etherscan</a>
+<a href="#" class="dropdown-item">Sepolia Etherscan</a>
+</ul>
+<button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#mycanv">
+<span class="navbar-toggler-icon"></span>    
+</button>
+<div class="collapse navbar-collapse" id="myclnv">
+<ul class="navbar-nav  ms-auto">
+<li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Metadata API</a></li>
+<li class="nav-item"><a href="#" class="nav-link">API PRO</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Twitter</a></li>
+</ul>
+<div class="row" style="width: 163px;">
+<div class="col-lg-12">    
+<div class="input-group">
+<button type="button" class="btn btn-light form-control" data-bs-toggle="modal" data-bs-target="#mymdl">
+<span class="input-group-text"><i class="fa fa-search text-muted me-1"></i> Search</span>
+</button>
+<!--col end-->
+</div>
+<!--row end-->    
+</div>
+    <!--input group div end-->
+</div>
+    <!--navbar collapse div end-->
+</div>
+    <!--container fluid div end-->
+</div>
+</nav>
+</header>
+
+
+<div class="content">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-12 col-12">
+<div class="sidebr" style="overflow: scroll; height: 100vh;">
+<nav class="navbar">
+<ul class="navbar-nav p-2">
+<div class="head">
+<a href="#" class="active">Introduction</a>    
+    <!--head div end-->
+</div>
+
+<div class="getting-started pt-3 mt-4">
+<div class="head">
+<a href="#"><i class="fa-solid fa-star-of-life text-warning"></i> Getting Started</a>    
+<!--head end-->
+</div>
+<div class="under pt-2">
+<div class="link-u"><a href="#" class="">Creating an Account</a></div>
+<div class="link-u"><a href="#" class="">Getting an API key</a></div>
+<div class="link-u"><a href="#" class="">Endpoint URLs</a></div>
+    <!--under end-->
+</div>
+    <!--getting started div end-->
+</div>
+
+
+<div class="api-endpoint pt-3">
+<div class="head">
+<a href="#"><img src="../EtherscanImg/knifecrcl.jpg" alt="" style="width: 38px;"> Api Endpoint</a>    
+<!--head end-->
+</div>
+<div class="under pt-2">
+<div class="link-u"><a href="#" class="">Accounts</a></div>
+<div class="link-u"><a href="#" class="">Contracts</a></div>
+<div class="link-u"><a href="#" class="">Transactions</a></div>
+<div class="link-u"><a href="#" class="">Blocks</a></div>
+<div class="link-u"><a href="#" class="">Logs</a></div>
+<div class="link-u"><a href="#" class="">Geth/Parity Proxy</a></div>
+<div class="link-u"><a href="#" class="">Tokens</a></div>
+<div class="link-u"><a href="#" class="">Gas Tracker</a></div>
+<div class="link-u"><a href="#" class="">Stats</a></div>
+    <!--under end-->
+</div>
+    <!--api endpoints div end-->
+</div>
+
+
+
+<div class="api-pro pt-3">
+<div class="head">
+<a href="#"><img src="../EtherscanImg/gTrophy.jpg" alt="" style="width: 38px;"> API PRO</a>    
+<!--head end-->
+</div>
+<div class="under pt-2">
+<div class="link-u"><a href="#" class="">Etherscan API PRO</a></div>
+<div class="link-u"><a href="#" class="">API PRO Endpoints</a></div>
+    <!--under end-->
+</div>
+    <!--api pro div end-->
+</div>
+
+
+<div class="recipes pt-3">
+<div class="head">
+<a href="#"><i class="fa-solid fa-person text-warning"></i> Recipes</a>    
+<!--head end-->
+</div>
+<div class="under pt-2">
+<div class="link-u"><a href="#" class="">Get All USDT Transfers from Binance</a></div>
+<div class="link-u"><a href="#" class="">Get the Latest Moonbird NFT Transfers</a></div>
+<div class="link-u"><a href="#" class="">List ETH deposits to Arbitrum Bridge</a></div>
+    <!--under end-->
+</div>
+    <!--recipes div end-->
+</div>
+
+
+<div class="tutorial pt-3">
+<div class="head">
+<a href="#"><i class="fa-solid fa-book-open text-muted"></i> TUTORIALS</a>    
+<!--head end-->
+</div>
+<div class="under pt-2">
+<div class="link-u"><a href="#" class="">Signing Raw Transactions</a></div>
+<div class="link-u"><a href="#" class="">Read/Write Smart Contracts</a></div>
+<div class="link-u"><a href="#" class="">Integrating Google Sheets</a></div>
+<div class="link-u"><a href="#" class="">Verifying Contracts Programmatically</a></div>
+    <!--under end-->
+</div>
+    <!--tutorial div end-->
+</div>
+
+
+
+<div class="misc pt-3">
+<div class="head">
+<a href="#"><i class="fa-solid fa-screwdriver-wrench"></i> Misc Tools & Utilities</a>    
+<!--head end-->
+</div>
+<div class="under pt-2">
+<div class="link-u"><a href="#" class="">Libraries</a></div>
+<div class="link-u"><a href="#" class="">Plugins</a></div>
+    <!--under end-->
+</div>
+    <!--misc div end-->
+</div>
+
+
+<div class="support pt-3">
+<div class="head">
+<a href="#"><i class="fa-solid fa-handshake text-warning"></i> Support</a>    
+<!--head end-->
+</div>
+<div class="under pt-2">
+<div class="link-u"><a href="#" class="">FAQ</a></div>
+<div class="link-u"><a href="#" class="">Rate Limits</a></div>
+<div class="link-u"><a href="#" class="">Common Error Messages</a></div>
+<div class="link-u"><a href="#" class="">Common Verification Errors</a></div>
+<div class="link-u"><a href="#" class="">Getting Help</a></div>
+    <!--under end-->
+</div>
+    <!--support div end-->
+</div>
+
+
+<div class="visit pt-3">
+<div class="under pt-2">
+<div class="link-u">
+<a href="#" class="d-flex justify-content-between align-items-center">Visit Etherscan.io
+<div><i class="fa-solid fa-arrow-up-right-from-square text-muted"></i></div>
+</a>
+</div>
+    <!--under end-->
+</div>
+    <!--visit div end-->
+</div>
+</ul>
+</nav>
+    <!--sidebr end-->
+</div>
+    <!--col lg 3 div end-->
+</div>
+
+<div class="col-lg-8 col-md-8 col-sm-12 col-12 p-4 infocenter "> 
+<div class="main pt-5 pb-4">
+<h1 class="fw-bold">Introduction</h1>
+<p class="lead pt-2 pb-2 text-muted">Welcome to the Etherscan APIs documentation 🚀.</p>
+    <!--main end-->
+</div>
+<div class="cntnt">
+<div class="para">
+<span>Etherscan</span>
+<span>
+<img src="../EtherscanImg/spaces_-McrExXKKJBLJqymbFhO_uploads_git-blob-29966808954100660b18274b582c1afb2fe45fed_etherscan-logo-circle.webp" alt="" style="width: 20px;">    
+</span> 
+is the leading blockchain explorer, search, API and analytics platform for Ethereum
+<span><img src="../EtherscanImg/ethereum-original.svg" alt="" style="width: 17px;"></span>
+, a decentralized smart contracts platform.
+    <!--para end-->
+</div>    
+
+<div class="para mt-3">
+<p>
+As a means to provide equitable access to blockchain data, we've developed the 
+<b>Etherscan Developer APIs</b>    
+<span> to empower developers with direct access to Etherscan's block explorer data and services via </span>
+<b>GET/POST requests.</b>
+</p>
+    <!--para end-->
+</div>
+
+<div class="para mt-3">
+<p>
+Etherscan's APIs are provided as a 
+<b>community service</b> 
+and    
+<b>without warranty</b>
+, so please use what you need and no more.
+</p>
+    <!--para end-->
+</div>
+
+
+<div class="card bg-light mt-4 p-3" style="border-left: 4px solid green;">
+<div class="d-flex justify-content-between gap-2">    
+<div><i class="fa-regular fa-circle-check text-success"></i></div>
+<div>
+<b>Source attribution</b>    
+<span> via a backlink or a mention that your app is </span>
+<b>"Powered by Etherscan.io APIs"</b>
+<span> is required except for personal/private usage.</span>
+</div>
+<!--d flex end-->
+</div>
+    <!--card end-->
+</div>
+
+
+
+<div class="api-endp mt-4">
+<h4 class="fw-bold">API Endpoints</h4>
+<div class="card bg-light p-1 border-0" style="border-left: 5px solid #cfcfcf;">
+<p>Your app may need to show <em>a user's ERC-20 token holdings</em>
+and their USD value  <span>💰</span>
+<span> , check if a transaction has been mined </span>
+⛏
+<span> or </span>
+<em>get the latest gas price estimates</em>
+<span>⛽</span>
+</p>    
+    <!--card end-->
+</div>
+    <!--api end p div end-->
+</div>
+
+<div class="para mt-3">
+For that you may find a suitable endpoint from our wide range of APIs that you can simply query to provide data while you remain fully focused on building your applications.
+    <!--para end-->
+</div>
+
+<div class="mt-3">
+<p>
+Etherscan offers 2 types of API plans, a set of free 
+<b>community endpoints</b>
+and 
+<b><a href="#" class="text-dark">API PRO </a></b>
+which consists of additional derived blockchain data.
+</p>    
+</div>
+
+<div class="tutorial mt-3">
+<h4 class="fw-bold">Tutorial</h4>
+<div class="card bg-light border-0">
+<p>
+There is an overwhelming amount of data 
+<span>📈</span>    
+that can be extracted from the Ethereum blockchain.
+</p>    
+    <!--card end-->
+</div>
+    <!--tutorial div end-->
+</div>
+
+<div class="para mt-3">
+We've helped you take the first steps by writing some thorough tutorials on how to query and derive popular blockchain metrics.     
+</div>
+
+<div class="para mt-3">
+For power users, we've also added guides such as how you can  
+<span>programmatically verify contracts</span>   
+through API calls and more advanced use cases of endpoints.
+</div>
+
+<div class="support mt-3">
+<h4 class="fw-bold">Support & FAQ</h4>
+<p>
+Our curated list of <b>support articles</b>  <span> and </span>   <strong>common questions</strong>
+you may have on topics such as <em>rate limits</em> <span>🚧</span> , common error messages 
+<span>⛔</span>  and API key usage <em>across different networks</em> <span>🌏</span>
+</p>
+<p class="mt-3">
+If your issue is a unique one or you need more clarification, feel free to reach out to us via our
+<a href="#" class="text-decoration-none text-dark fw-bold">support channels.</a>     
+</p>
+    <!--support div end-->
+</div>
+
+<div class="row mt-4">
+<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+<a href="#" class="card text-decoration-none d-flex p-1">
+<div class="d-flex justify-content-between align-items-center">
+<div class="text-muted">
+Next  - Getting Started
+<div class="d-block fw-bold">Creating an Account</div>
+</div>
+<div class="d-flex">
+<i class="fa fa-arrow-right me-1"></i>    
+</div>
+    <!--d flex end-->
+</div>
+</a>
+    <!--col lg 12 div end-->
+</div>
+
+<div class="col-lg-12 col-md-12 col-sm-12 col-12 mt-3">
+<a href="#" class="card text-decoration-none d-flex p-4">
+<div class="d-flex justify-content-between align-items-center">
+<div class="text-muted">
+Last modified <em>1yr ago</em>
+</div>
+<div class="d-flex text-muted text-center">
+<p class="fw-bold">Was this page helpful? </p> 
+<div class="emoji ms-2 fs-4">
+<i class="fa-solid fa-face-smile me-2 sad"></i>
+<i class="fa-solid fa-face-meh me-2 unhpy"></i>
+<i class="fa-solid fa-face-grin-wide hpy"></i>
+</div>
+</div>
+    <!--d flex end-->
+</div>
+</a>
+    <!--col lg 12 div end-->
+</div>
+
+
+    <!--row end-->
+</div>
+
+
+<!--cntnt div end-->
+</div>
+    <!-- col lg 8 div end-->
+</div>
+
+    <!--row end-->
+</div>
+    <!--content div end-->
+</div>
+
+
+<div class="modal" id="mymdl">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header border-0">
+<div class="input-group">    
+<span class="input-group-text"><i class="fa fa-search text-muted border-0"></i></span>    
+<input type="text" name="" id="" class="form-control">
+<!--input group end-->
+</div>
+    <!--modal header end-->
+</div>    
+<div class="modal-body text-center p-4 border-0">
+<p class="text-muted">Type something to Search</p>
+    <!--modal body end-->
+</div>
+    <!--modal content end-->
+</div>    
+    <!--modal dialog end-->
+</div>
+    <!--modal end-->
+</div>
+
+
+
+<div class="offcanvas offcanvas-start" id="mycanv">
+<div class="offcanvas-header">
+<button type="button" class="btn-close" data-bs-toggle="offcanvas"></button>
+<button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#mymdln">Etherscan <i class="fa fa-angle-down"></i></button>
+</div>
+<div class="offcanvas-body">
+<div class="sidebr">
+<nav class="navbar">
+<ul class="navbar-nav p-2">
+<div class="head">
+<a href="#" class="active">Introduction</a>    
+    <!--head div end-->
+</div>
+
+<div class="getting-started pt-3 mt-4">
+<div class="head">
+<a href="#"><i class="fa-solid fa-star-of-life text-warning"></i> Getting Started</a>    
+<!--head end-->
+</div>
+<div class="under pt-2">
+<div class="link-u"><a href="#" class="">Creating an Account</a></div>
+<div class="link-u"><a href="#" class="">Getting an API key</a></div>
+<div class="link-u"><a href="#" class="">Endpoint URLs</a></div>
+    <!--under end-->
+</div>
+    <!--getting started div end-->
+</div>
+
+
+<div class="api-endpoint pt-3">
+<div class="head">
+<a href="#"><img src="../EtherscanImg/knifecrcl.jpg" alt="" style="width: 38px;"> Api Endpoint</a>    
+<!--head end-->
+</div>
+<div class="under pt-2">
+<div class="link-u"><a href="#" class="">Accounts</a></div>
+<div class="link-u"><a href="#" class="">Contracts</a></div>
+<div class="link-u"><a href="#" class="">Transactions</a></div>
+<div class="link-u"><a href="#" class="">Blocks</a></div>
+<div class="link-u"><a href="#" class="">Logs</a></div>
+<div class="link-u"><a href="#" class="">Geth/Parity Proxy</a></div>
+<div class="link-u"><a href="#" class="">Tokens</a></div>
+<div class="link-u"><a href="#" class="">Gas Tracker</a></div>
+<div class="link-u"><a href="#" class="">Stats</a></div>
+    <!--under end-->
+</div>
+    <!--api endpoints div end-->
+</div>
+
+
+
+<div class="api-pro pt-3">
+<div class="head">
+<a href="#"><img src="../EtherscanImg/gTrophy.jpg" alt="" style="width: 38px;"> API PRO</a>    
+<!--head end-->
+</div>
+<div class="under pt-2">
+<div class="link-u"><a href="#" class="">Etherscan API PRO</a></div>
+<div class="link-u"><a href="#" class="">API PRO Endpoints</a></div>
+    <!--under end-->
+</div>
+    <!--api pro div end-->
+</div>
+
+
+<div class="recipes pt-3">
+<div class="head">
+<a href="#"><i class="fa-solid fa-person text-warning"></i> Recipes</a>    
+<!--head end-->
+</div>
+<div class="under pt-2">
+<div class="link-u"><a href="#" class="">Get All USDT Transfers from Binance</a></div>
+<div class="link-u"><a href="#" class="">Get the Latest Moonbird NFT Transfers</a></div>
+<div class="link-u"><a href="#" class="">List ETH deposits to Arbitrum Bridge</a></div>
+    <!--under end-->
+</div>
+    <!--recipes div end-->
+</div>
+
+
+<div class="tutorial pt-3">
+<div class="head">
+<a href="#"><i class="fa-solid fa-book-open text-muted"></i> TUTORIALS</a>    
+<!--head end-->
+</div>
+<div class="under pt-2">
+<div class="link-u"><a href="#" class="">Signing Raw Transactions</a></div>
+<div class="link-u"><a href="#" class="">Read/Write Smart Contracts</a></div>
+<div class="link-u"><a href="#" class="">Integrating Google Sheets</a></div>
+<div class="link-u"><a href="#" class="">Verifying Contracts Programmatically</a></div>
+    <!--under end-->
+</div>
+    <!--tutorial div end-->
+</div>
+
+
+
+<div class="misc pt-3">
+<div class="head">
+<a href="#"><i class="fa-solid fa-screwdriver-wrench"></i> Misc Tools & Utilities</a>    
+<!--head end-->
+</div>
+<div class="under pt-2">
+<div class="link-u"><a href="#" class="">Libraries</a></div>
+<div class="link-u"><a href="#" class="">Plugins</a></div>
+    <!--under end-->
+</div>
+    <!--misc div end-->
+</div>
+
+
+<div class="support pt-3">
+<div class="head">
+<a href="#"><i class="fa-solid fa-handshake text-warning"></i> Support</a>    
+<!--head end-->
+</div>
+<div class="under pt-2">
+<div class="link-u"><a href="#" class="">FAQ</a></div>
+<div class="link-u"><a href="#" class="">Rate Limits</a></div>
+<div class="link-u"><a href="#" class="">Common Error Messages</a></div>
+<div class="link-u"><a href="#" class="">Common Verification Errors</a></div>
+<div class="link-u"><a href="#" class="">Getting Help</a></div>
+    <!--under end-->
+</div>
+    <!--support div end-->
+</div>
+
+
+<div class="visit pt-3">
+<div class="under pt-2">
+<div class="link-u">
+<a href="#" class="d-flex justify-content-between align-items-center">Visit Etherscan.io
+<div><i class="fa-solid fa-arrow-up-right-from-square text-muted"></i></div>
+</a>
+</div>
+    <!--under end-->
+</div>
+    <!--visit div end-->
+</div>
+</ul>
+</nav>
+    <!--sidebr end-->
+</div>
+<!--offcanvas body end-->
+</div>
+    <!--offcanvas end-->
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="modal " id="mymdln">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+<div class="modal-header">
+<div class="d-flex justify-content-between align-items-center">
+<div class="d-flex">
+<a href="#" class="text-dark fw-bold text-decoration-none">Etherscan</a>
+</div>
+<button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"></button>
+    <!--d flex end-->
+</div>
+    <!--modal header end-->
+</div>    
+<div class="modal-body">
+<ul class="navbar-nav">
+<li class="nav-item"><a href="#" class="nav-link">Goerli Etherscan</a></li>
+<li class="nav-item"><a href="#" class="nav-link">Sepolia Etherscan</a></li>
+</ul>
+    <!--modal body end-->
+</div>
+    <!--modal content end-->
+</div>
+    <!--modal dialog end-->
+</div>
+    <!--modal end-->
+</div>
+
+</body>
+</html>

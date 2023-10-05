@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.main{
+  background-image: url(../EtherscanImg/abstract-diagonal-lines-striped-blue-gradient-background-and-texture-for-your-business-vector.jpg);
+  background-size: cover;
+  height: auto;
+  width: 100%;
+}
+.main-two .container .row .col-lg-4 a:hover{
+    border: 1px solid #3498db;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+.main-two .container .row .col-lg-4 .card .card-footer a:hover{
+    border: none;
+}
+.main-two .container .row .nav li a:hover{
+    border: 1px solid #3498db;
+}
+.footer .container ul li a{
+    text-decoration: none;
+    color: black;
+}
+.footer .container ul li a:hover{
+    color: #3498db;
+    transition: all 0.5s;
+}    
+.footer .container ul li {
+    padding: 4px;
+}

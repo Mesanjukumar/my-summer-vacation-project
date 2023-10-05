@@ -1,0 +1,103 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.ethprice .d-flex .dropdown .dropdown-menu > li button:hover{
+    background: #fff;
+}
+.ethprice .d-flex .dropdown .dropdown-menu li button.active{
+    background: #fff;
+    color: #2980b9;
+}
+#user{
+    display: none;
+}
+.header .navbar .collapse .navbar-nav .dropdown >.dropdown-menu{
+    width: 290px;
+    border-top: 4px solid #192a56;
+    border-left: 4px solid #192a56;
+}
+.header .navbar .collapse .navbar-nav .dropdown >.dropdown-menu li a:hover{
+    background: #fff;
+}
+#moredrop{
+    width: max-content;
+    right: 0px;
+}
+#develdrop{
+    right: 0px;
+}
+.header .navbar .collapse .navbar-nav li a:hover{
+    color: #192a56;
+    transition: all 0.3s;
+}
+.header .navbar .collapse .navbar-nav li a.active{
+    color: #2980b9;
+    font-weight: bold;
+    background: #fff;
+}
+.header .navbar .collapse .navbar-nav li.dropdown:hover > .dropdown-menu{
+    display: block;
+    transition: all 0.5s;
+    position: absolute;
+    right: 0px;
+}
+.header .navbar .collapse .navbar-nav li.dropdown:hover > .dropdown-menu li:hover{
+    background: #bdc3c7;
+}
+.card .card-body .table-responsive .table tbody tr td a{
+    text-decoration: none;
+    color: #2980b9;
+}
+.cds .row .col-lg-3 a.card:hover p{
+    color: #2980b9;
+    transition: ease-in 0.5s;
+}
+.footer .container ul li a{
+    text-decoration: none;
+    color: black;
+}
+.footer .container ul li a:hover{
+    color: #3498db;
+    transition: all 0.5s;
+}    
+.footer .container ul li {
+    padding: 4px;
+}
+@media screen and (max-width: 990px) {
+#eth{
+    display: none;
+}    
+.ethprice .d-flex .dropdown{
+    display: none;
+}
+#searcht{
+    width: 100%;
+}
+}
+@media screen and (max-width:990px) {
+.header .navbar .collapse .navbar-nav .dropdown >.dropdown-menu{
+    width: 100%;
+}
+#moredrop{
+    width: auto;
+}
+}
+@media screen and (max-width: 1115px) {
+   .main .table-card .card .card-body .table-responsive .table{
+    width: max-content;
+} 
+.card .card-body .table-responsive .table{
+    width: max-content;
+}
+}
+@media screen and (max-width: 559px) {
+#pagnbtm{
+display: none;
+}
+}
+@media screen and (max-width:748px) {
+ #pgntop{
+display: none;
+}   
+}

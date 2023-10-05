@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etherscann Directory</title>
+    <link rel="stylesheet" href="../EtherscanCss/EtherscanDirectory.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js">
+<link rel="icon" href="../EtherscanImg/favicon.png" type="icon/png">
+</head>
+<body>
+<section class="ethprice">
+<div class="d-flex justify-content-between align-items-center p-1">
+<div class="left" id="eth">
+<div class="text-muted">
+<span class=text-muted>ETH Price:</span>
+<a href="#" class="text-decoration-none">$1,940.34</a>
+<span class="text-danger"> (-2.65%)</span>
+</div>
+    <!--left end-->
+</div>
+<div class="d-flex justify-content-end align-items-center" id="searcht">
+<div class="input-group">
+<button type="button" class="input-group-text"><i class="fa fa-search text-muted"></i></button> 
+<input type="text" class="form-control" placeholder="Search by Address / Txn Hash / Block / Token / Domain Name">
+    <!--input-group div end-->
+</div>
+<button type="button" class="dropdown btn btn-light ms-1"  data-bs-toggle="dropdown">
+<i class="fa-regular fa-sun"></i>   
+</button>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><button type="button" class="btn btn-light"><i class="fa-regular fa-sun"></i> Light</button></li>
+<li><button type="button" class="btn btn-light"><i class="fa-regular fa-moon"></i> Dark</button></li>
+<hr>    
+<li><button type="button" class="btn btn-light"><i class="fa fa-cog"></i> Site Settings <i class="fa fa-arrow-right"></i></button></li>
+</ul>
+
+<button type="button" class="dropdown btn btn-light ms-1"  data-bs-toggle="dropdown">
+<i class="fa-regular fa-sun"></i>   
+</button>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><button type="button" class="btn btn-light">Ethereum Mainnet</button></li>
+<li><button type="button" class="btn btn-light">Ethereum Mainnet <span class="badge bg-light text-dark">CN</span></button></li>
+<li><button type="button" class="btn btn-light">Beaconscan  <span class="badge bg-light text-dark">ETH2</span></button></li>
+<hr>
+<li><button type="button" class="btn btn-light">Goerli Testnet</button></li>
+<li><button type="button" class="btn btn-light">Sepolia Testnet</button></li>
+</ul>
+    <!--d flex right side-->
+</div>
+    <!--d flex end-->
+</div>
+</div>
+    <!--eth price div end-->
+</section>
+
+
+<header class="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="undernav m-1 d-flex justify-content-between align-items-center">
+    <a href="#" class="navbar-brand"><img src="../EtherscanImg/logo-etherscan.svg" alt="" style="width: 144px;"></a>
+        <!--under nav div end-->
+    </div>
+    <div class="d-flex align-items-center justify-content-between">
+    <a href="#" class="text-muted text-decoration-none me-1" id="user"><i class="fa-regular fa-user"></i> Sign in</a>
+    <button type="button" class="navbar-toggler border-0 me-1" data-bs-toggle="collapse" data-bs-target="#mynav">
+    <span class="navbar-toggler-icon"></span>    
+    </button>
+        <!--d flex end-->
+    </div>
+    <div class="collapse navbar-collapse justify-content-end m-1" id="mynav">
+    <ul class="navbar-nav">
+    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blockchain</a>
+    <ul class="dropdown-menu dropdown-menu-end">
+    <li><a href="#" class="dropdown-item">Transactions</a></li>
+    <li><a href="#" class="dropdown-item ">Pending Transactions</a></li>
+    <li><a href="#" class="dropdown-item">Contract Internal Transactions</a></li>
+    <li><a href="#" class="dropdown-item">Beacon Deposits</a></li>    
+    <li><a href="#" class="dropdown-item">Beacon Withdrawals</a></li>
+    <hr class="dropdown-divider">
+    <li><a href="#" class="dropdown-item">View Blocks</a></li>
+    <li><a href="#" class="dropdown-item">Forked Blocks (Reorgs)</a></li>
+    <li><a href="#" class="dropdown-item">Uncles</a></li>
+    <hr class="dropdown-devider">
+    <li><a href="#" class="dropdown-item">Top Accounts</a></li>
+    <li><a href="#" class="dropdown-item">Verified Contracts</a></li>
+    </ul>
+    </li>
+    
+    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"data-bs-toggle="dropdown">Tokens</a>
+    <ul class="dropdown-menu dropdown-menu-end">
+    <li><a href="#" class="dropdown-item">Top Tokens <span class="text-muted">(ERC-20)</span></a></li>
+    <li><a href="#" class="dropdown-item">Token Transfers  <span class="text-muted">(ERC-20)</span></a></li>    
+    </ul>
+    </li>
+    
+    <li class="nav-item dropdown"><a href="#" class="nav-link"data-bs-toggle="dropdown">NFT's</a>
+    <ul class="dropdown-menu dropdown-menu-end">
+    <li><a href="#" class="dropdown-item">Top Mints</a></li>
+    <li><a href="#" class="dropdown-item">Top NFTs</a><li>
+    <li><a href="#" class="dropdown-item">Latest Trades</a><li></li>    
+    <li><a href="#" class="dropdown-item">Latest Transfers</a><li></li>
+    <li><a href="#" class="dropdown-item">Latest Mints</a><li></li>
+    </ul>
+    </li>
+    
+    <li class="nav-item dropdown"><a href="#" class="nav-link active dropdown-toggle"data-bs-toggle="dropdown">Resources</a>
+    <ul class="dropdown-menu dropdown-menu-end">
+    <li><a href="#" class="dropdown-item">Charts And Stats</a></li>
+    <li><a href="#" class="dropdown-item">Top Statistics</a><li>
+    <hr class="dropdown-divider">
+    <li><a href="#" class="dropdown-item active">Directory</a><li></li>    
+    <li><a href="#" class="dropdown-item">Newsletter</a><li></li>
+    <li><a href="#" class="dropdown-item">Knowledge Base</a><li></li>
+    </ul>
+    </li>
+    
+    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"data-bs-toggle="dropdown">Developers</a>
+    <ul class="dropdown-menu dropdown-menu-end" id="develdrop">
+    <li><a href="#" class="dropdown-item">API Plans</a></li>
+    <li><a href="#" class="dropdown-item">API Documentation</a><li>
+    <hr class="dropdown-divider">
+    <li><a href="#" class="dropdown-item">Code Reader <span class="badge bg-light text-dark">Beta</span></a><li></li>    
+    <li><a href="#" class="dropdown-item">Verify Contract</a><li></li>
+    <li><a href="#" class="dropdown-item">Similar Contract Search</a><li></li>
+    <li><a href="#" class="dropdown-item">Smart Contract Search</a><li></li>
+    <li><a href="#" class="dropdown-item">Contract Diff Checker</a><li></li>
+    <hr class="drodown-divider">
+    <li><a href="#" class="dropdown-item">Vyper Online Compiler</a><li></li>
+    <li><a href="#" class="dropdown-item">Bytecode to Opcode</a><li></li>
+    <li><a href="#" class="dropdown-item">Broadcast Transaction</a><li></li>
+    </ul>
+    </li>
+    
+    <li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle"data-bs-toggle="dropdown">More</a>
+    <ul class="dropdown-menu dropdown-menu-end" id="moredrop" style="overflow-x: hidden;">
+    <div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+    <div class="d-flex flex-column p-2">
+    <div>
+    <h6>Tools & Services</h6> 
+    <p>Discover more of Etherscan's tools and services in one place.</p>   
+     <!--top div end-->   
+    </div>
+    <div class="mt-5 mb-5">
+    <p class="text-muted">Sponsored</p>
+    <img src="../EtherscanImg/blockscan-logo-light.svg" alt="" style="filter: invert(1); width: 110px;">
+        <!--bottom div end dropdown-->
+    </div>
+        <!--d flex end-->
+    </div>
+        <!--col end-->
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+    <h6 class="mb-3">Tools</h6>
+    <ul class="list-unstyled">
+    <li><a href="#" class="dropdown-item"><i class="fa-sharp fa-solid fa-arrows-to-circle"></i> Unit Converter</a></li>
+    <li><a href="#" class="dropdown-item"><i class="fa-solid fa-download"></i> CSV Export</a></li>    
+    <li><a href="#" class="dropdown-item"><i class="fa-regular fa-file"></i> Account Balance Checker</a></li>
+    </ul>
+        <!--col end-->
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+    <h6 class="mb-3">Explore</h6>
+    <ul class="list-unstyled">
+    <li><a href="#" class="dropdown-item"><i class="fa fa-gas-pump"></i> Gas Tracker</a></li>
+    <li><a href="#" class="dropdown-item"><i class="fa-solid fa-arrow-right-arrow-left"></i> DEX Tracker</a></li>    
+    <li><a href="#" class="dropdown-item"><i class="fa-solid fa-network-wired"></i> Node Tracker</a></li>
+    <li><a href="#" class="dropdown-item"><i class="fa-solid fa-signal"></i> Label Cloud</a></li>    
+    <li><a href="#" class="dropdown-item"><i class="fa-solid fa-magnifying-glass"></i> Node Tracker</a></li>
+    </ul>
+        <!--col end-->
+    </div>
+    
+    <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+    <h6 class="mb-3">Services</h6>
+    <ul class="list-unstyled">
+    <li><a href="#" class="dropdown-item"><i class="fa-solid fa-shield"></i> Token Approvals <span class="badge bg-light text-dark">Beta</span></a></li>
+    <li><a href="#" class="dropdown-item"><i class="fa-solid fa-signature"></i> Verified Signature</a><li>    
+    <li><a href="#" class="dropdown-item"><i class="fa-solid fa-filter"></i> Advanced Filter <span class="badge bg-light text-dark">Beta</span></a></li>
+    <li><a href="#" class="dropdown-item"><i class="fa-solid fa-laptop"></i> Blockscan Chat <span class="ms-1 badge bg-light text-dark"><i class="fa-solid fa-arrow-up-right-from-square"></i> Beta</span></a></li>    
+    </ul>
+        <!--col end-->
+    </div>
+        <!--row end-->
+    </div>
+    </ul>
+    </li>
+    
+    <li class="nav-item"><a href="#" class="nav-link">| <span><i class="fa-regular fa-circle-user"></i> Sign in</span></a></li>
+    </ul>
+        <!--collapse navbar end-->
+    </div>
+    </nav>
+    </header>
+
+
+
+
+<section class="main p-3">
+<div class="d-flex align-items-center justify-content-start">
+<p class="fs-5 fw-bold">
+Ethereum Directory
+</p>    
+</div>
+<hr style="opacity: 0.1;">
+    <!--text muted end-->
+</div>
+<div class="row m-1 pt-2 pb-2">
+<div class="col-12">
+<b>Featured:</b>  
+Effortlessly analyze smart contract code with the✨ 
+<b>AI-powered Code Reader!</b> 
+<a href="#" class="text-decoration-none">Learn more.</a> 
+    <!--col 12 end-->
+</div>
+    <!--row end-->
+</div>
+
+
+
+<div class="content mt-3">
+<div class="container">
+<div class="input-group"> 
+<input type="text" class="form-control p-3" placeholder="Search Exchanges, Wallets, ICOs and more..">
+<button type="button" class="btn btn-primary" style="width: 55px;"><i class="fa fa-search"></i></button>
+</div>
+<div class="d-flex flex-column mt-3">
+<span>
+Just Added: 
+<a href="#">Launchcaster</a>
+<a href="#">SaferIco</a>
+<a href="#">Cyfrin</a>
+<a href="#">EtherAuthority</a>
+<a href="#">DropsTab</a>
+<a href="#">Mt Pelerin</a>
+<a href="#">Bebop</a>
+<a href="#">Coin TR</a>
+<a href="#">AnCrypto</a>
+<a href="#">Clipper</a>
+</span>    
+    <!--d flex end-->
+</div>
+    <!--container end-->
+</div>
+    <!--content div end-->
+</div>
+
+
+<div class="row mt-3">
+<div class="col-lg-4 col-md-4 col-sm-12 col-12 mt-3">
+<div class="card border-0">
+<div class="card-body">
+<div class="text-center">
+<img src="../EtherscanImg/icon-exchange.svg" alt="" style="width: 45px;">
+<h5 class="mt-2">Exchanges</h5>   
+<p>Places to buy and sell cryptocurrencies</p> 
+<p class="mt-2">
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">Crypto Exchanges</a>
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">DEX</a>    
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">Fiat Exchanges</a>
+</p>
+</div>
+    <!--card body div end-->
+</div>
+    <!--card end-->
+</div>
+    <!--col lg 4 div end-->
+</div>
+<div class="col-lg-4 col-md-4 col-sm-12 col-12 mt-3">
+<div class="card border-0">
+<div class="card-body">
+<div class="text-center">
+<img src="../EtherscanImg/icon-wallet.svg" alt="" style="width: 45px;">
+<h5 class="mt-2">Wallet</h5>   
+<p>Used to receive and spend cryptoassets</p> 
+<p class="mt-2">
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">GUI Wallets</a>
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">Hardware Wallets</a>    
+</p>
+</div>
+    <!--card body div end-->
+</div>
+    <!--card end-->
+</div>
+    <!--col lg 4 div end-->
+</div>
+<div class="col-lg-4 col-md-4 col-sm-12 col-12 mt-3">
+<div class="card border-0">
+<div class="card-body">
+<div class="text-center">
+<img src="../EtherscanImg/icon-ico.svg" alt="" style="width: 45px;">
+<h5 class="mt-2">Listing And Prices</h5>   
+<p>Listing and Prices for Projects and Tokens</p> 
+<p class="mt-2">
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">Benchmark Listing</a>
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">Price Watch</a>    
+</p>
+</div>
+    <!--card body div end-->
+</div>
+    <!--card end-->
+</div>
+    <!--col lg 4 div end-->
+</div>
+<div class="col-lg-4 col-md-4 col-sm-12 col-12 mt-3">
+<div class="card border-0">
+<div class="card-body">
+<div class="text-center">
+<img src="../EtherscanImg/icon-newsforum.svg" alt="" style="width: 45px;">
+<h5 class="mt-2">News and Forums</h5>   
+<p>Get close to the community</p> 
+<p class="mt-2">
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">Crypto News</a>
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">Forums</a>    
+</p>
+</div>
+    <!--card body div end-->
+</div>
+    <!--card end-->
+</div>
+    <!--col lg 4 div end-->
+</div>
+<div class="col-lg-4 col-md-4 col-sm-12 col-12 mt-3">
+<div class="card border-0">
+<div class="card-body">
+<div class="text-center">
+<img src="../EtherscanImg/icon-events.svg" alt="" style="width: 45px;">
+<h5 class="mt-2">Events</h5>   
+<p>Find the events near you</p> 
+<p class="mt-2">
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">Upcoming Events</a>
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">Past Events</a>    
+</p>
+</div>
+    <!--card body div end-->
+</div>
+    <!--card end-->
+</div>
+    <!--col lg 4 div end-->
+</div>
+<div class="col-lg-4 col-md-4 col-sm-12 col-12 mt-3">
+<div class="card border-0">
+<div class="card-body">
+<div class="text-center">
+<img src="../EtherscanImg/icon-learning.svg" alt="" style="width: 45px;">
+<h5 class="mt-2">Learning Resources</h5>   
+<p>Learn more about blockchain basics</p> 
+<p class="mt-2">
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">Blockchain</a>
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">Ethereum</a>    
+</p>
+</div>
+    <!--card body div end-->
+</div>
+    <!--card end-->
+</div>
+    <!--col lg 4 div end-->
+</div>
+<div class="col-lg-4 col-md-4 col-sm-12 col-12 mt-3">
+<div class="card border-0">
+<div class="card-body">
+<div class="text-center">
+<img src="../EtherscanImg/icon-smartcontract.svg" alt="" style="width: 45px;">
+<h5 class="mt-2">Smart Contracts</h5>   
+<p>For more advanced users</p> 
+<p class="mt-2 d-flex flex-column">
+<a href="#" class="btn btn-outline-primary btn-sm gap-1 mb-1">Services</a>
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">Smart Contracts Audit and Security</a> 
+<a href="#" class="btn btn-outline-primary btn-sm gap-1 mt-1">Smart Contracts Factory</a>    
+</p>
+</div>
+    <!--card body div end-->
+</div>
+    <!--card end-->
+</div>
+    <!--col lg 4 div end-->
+</div>
+<div class="col-lg-4 col-md-4 col-sm-12 col-12 mt-3">
+<div class="card border-0">
+<div class="card-body">
+<div class="text-center">
+<img src="../EtherscanImg/icon-mining.svg" alt="" style="width: 45px;">
+<h5 class="mt-2">Mining</h5>   
+<p>Join a pool and start mining</p> 
+<p class="mt-2">
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">Mining Pools</a>
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">Mining Talk</a>    
+</p>
+</div>
+    <!--card body div end-->
+</div>
+    <!--card end-->
+</div>
+    <!--col lg 4 div end-->
+</div>
+<div class="col-lg-4 col-md-4 col-sm-12 col-12 mt-3">
+<div class="card border-0">
+<div class="card-body">
+<div class="text-center">
+<img src="../EtherscanImg/icon-others.svg" alt="" style="width: 45px;">
+<h5 class="mt-2">Others</h5>   
+<p>Extra resources</p> 
+<p class="mt-2">
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">Career</a>
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">Grant</a>
+<a href="#" class="btn btn-outline-primary btn-sm gap-1">Tools</a>    
+</p>
+</div>
+    <!--card body div end-->
+</div>
+    <!--card end-->
+</div>
+    <!--col lg 4 div end-->
+</div>
+    <!--row div end-->
+</div>
+    <!--main end-->
+</section>
+
+
+
+
+
+
+
+
+<footer class="footer mt-5 bg-light pt-5">
+<div class="container">    
+<div class="d-flex justify-content-between align-items-center">
+<div class="bg-light"><a href="#" class="text-dark">
+<a href="#" class="text-dark me-3 fs-5"><i class="fa-brands fa-twitter"></i></a>
+<a href="#" class="text-dark me-3 fs-5"><i class="fa-brands fa-hornbill"></i></a>
+<a href="#" class="text-dark me-3 fs-5"><i class="fa-brands fa-facebook"></i></a>
+<a href="#" class="text-dark me-3 fs-5"><i class="fa-brands fa-discord"></i></a>
+</div>
+<div class="backarrow">
+<a href="#" class="btn btn-light"><i class="fa fa-arrow-up"></i> Back to Top</a>
+    <!--back arrow end-->
+</div>
+<!--d flex end-->
+</div>
+<hr class="mt-3 mb-5">
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-12 col-12 d-flex align-items-center">
+<img src="../EtherscanImg/ethereum-original.svg" alt="" style="width: 23px;" class="me-2">
+<span class="fs-4">Powered by Ethereum</span>
+</div>
+<p class="mt-2 mb-4">Etherscan is a Block Explorer and Analytics Platform for Ethereum, a decentralized smart contracts platform.
+</p>
+<div class="col-lg-4 col-md-6 col-sm-12 col-12">
+<h6 class="mb-2">Company</h6>
+<ul class="list-unstyled">
+<li><a href="#">About us</a></li>
+<li><a href="#">Brand Assets</a></li>    
+<li><a href="#">Contact Us</a></li>
+<li><a href="#">Careers <span class="badge bg-primary rounded-pill p-1">We're Hiring!</span></a></li>
+<li><a href="#">Terms of Service</a></li>
+<li><a href="#">Bug Bounty</a></li>
+</ul>
+    <!--col end-->
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12 col-12">
+<h6 class="mb-2">Community</h6>
+<ul class="list-unstyled">
+<li><a href="#">API Documentation</a></li>
+<li><a href="#">Knowledge Base</a></li>    
+<li><a href="#">Network Status</a></li>
+<li><a href="#">Newsletters</a></li>
+<li><a href="#">Disqus Comments</a></li>
+</ul>
+    <!--col end-->
+</div>
+<div class="col-lg-4 col-md-6 col-sm-12 col-12">
+<h6 class="mb-2">Products & Services</h6>
+<ul class="list-unstyled">
+<li><a href="#">Advertise</a></li>
+<li><a href="#">Explorer-as-a-Service (EaaS)</a></li>    
+<li><a href="#">API Plans</a></li>
+<li><a href="#">Priority Support</a></li>
+<li><a href="#">Blockscan <i class="fa fa-arrow-up-right-from-square ms-1"></i></a></li>
+<li><a href="#">Blockscan Chat </a></li>
+</ul>
+ <!--col end-->
+</div>
+    <!--row end-->
+</div>
+<div class="border pt-4 p-1">
+<div class="d-flex justify-content-between align-items-center">
+<div><p>Etherscan © 2023 (F1)</p></div> 
+<div><p>Donations: <a href="#" class="text-decoration-none">0x71c765...d8976f</a> <i class="fa fa-heart text-danger"></i></p></div>   
+    <!--d flex end-->
+</div>    
+<!--border div end-->    
+</div>
+
+
+
+
+</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

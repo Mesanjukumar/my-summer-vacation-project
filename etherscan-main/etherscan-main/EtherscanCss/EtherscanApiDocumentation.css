@@ -1,0 +1,93 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.header ul.navbar-nav li a{
+    font-weight: bold;
+}
+.content .row .col-lg-3 .sidebr .navbar ul.navbar-nav .head a{
+    text-decoration: none;
+    font-weight: bold;
+    color: #2c3e50;
+}
+.content .row .col-lg-3 .sidebr .navbar ul.navbar-nav .head a.active{
+    text-decoration: none;
+    font-weight: bold;
+    color: #2c3e50;
+    background: #d8d8d8;
+    display: block;
+}
+.content .row .col-lg-3 .sidebr .navbar ul.navbar-nav .under a{
+    text-decoration: none;
+    color: #95a5a6;
+    display: block;
+}
+.content .row .col-lg-3 .sidebr .navbar ul.navbar-nav .under .link-u{
+   padding: 5px; 
+}
+.content .row .col-lg-3 .sidebr .navbar ul.navbar-nav .under .link-u a{
+    padding: 5px; 
+ }
+.content .row .col-lg-3 .sidebr .navbar ul.navbar-nav .under .link-u a:hover{
+   background: #ececec;
+   color: #a5a5a5;
+  /* padding: 3px; */
+   border-radius: 3px;
+   transition: all 0.4s;
+}
+.cntnt .row .col-lg-12 .card .d-flex .emoji i.sad:hover{
+    color: red;
+}
+.cntnt .row .col-lg-12 .card .d-flex .emoji i.unhpy:hover{
+    color: brown;
+}
+.cntnt .row .col-lg-12 .card .d-flex .emoji i.hpy:hover{
+    color: green;
+}
+.content{
+    overflow-x: hidden;
+}
+.content .sidebr{
+    overflow: scroll;
+}
+
+@media screen and (max-width:767px) {
+.content .row .col-lg-3{
+    display: none;
+}
+.offcanvas .offcanvas-body .sidebr .navbar ul.navbar-nav .head a.active{
+    text-decoration: none;
+    font-weight: bold;
+    color: #2c3e50;
+    background: #d8d8d8;
+    display: block;
+}
+.offcanvas .offcanvas-body .sidebr .navbar ul.navbar-nav .head a{
+    padding: 6px;
+    display: block;
+    text-decoration: none;
+    color: #2c3e50;
+}
+.offcanvas .offcanvas-body .sidebr .navbar ul.navbar-nav .under a{
+    text-decoration: none;
+    color: #95a5a6;
+    display: block;
+    padding: 5px;
+}
+.offcanvas .offcanvas-body .sidebr .navbar ul.navbar-nav .under .link-u{
+   padding: 5px; 
+}
+.offcanvas .offcanvas-body.sidebr .navbar ul.navbar-nav .under .link-u a{
+    padding: 5px; 
+ }
+.offcanvas .offcanvas-body .sidebr .navbar ul.navbar-nav .under .link-u a:hover{
+   background: #ececec;
+   color: #a5a5a5;
+  /* padding: 3px; */
+   border-radius: 3px;
+   transition: all 0.4s;
+}
+#etherbtlg{
+    display: none;
+}
+}
